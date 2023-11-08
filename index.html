@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,300;0,400;0,500;1,300;1,400;1,500&display=swap" rel="stylesheet" />
+    
+    <link rel="stylesheet" href="./Assets/css/style.css" />
+
+    <title>World Weather Today</title>
+</head>
+<body>
+    <header>
+        <section class="title-frame">
+            <div class="title-grid">
+                <h1 class="title-item1">Weather Dashboard</h1>
+                <h2 class="title-item2">matsu</h2>
+                <div class="title-item3">DARK MODE</div>
+                <label class="title-item4 switch" title="switch theme" aria-label="switch theme">
+                    <input type="checkbox" id="theme-toggle">
+                    <span class="toggle round"></span>
+                </label>
+            </div>
+        </section>
+    </header>
+
+    <main>
+        <section class="page-frame">
+            <div class="page-grid">
+                <div class="search-container">
+                    <input id="city-search" type="text" placeholder="Search City" title="Type in a city name">
+                    <ul class="city-menu" id="top-cities" role="list">
+                        <!-- suggested cities are 10 largest in the U.S. source: Investopedia -->
+                        <li role="listitem"><a href="#">New York, NY</a></li>
+                        <li role="listitem"><a href="#">Los Angeles, CA</a></li>
+                        <li role="listitem"><a href="#">Chicago, IL</a></li>
+                        <li role="listitem"><a href="#">Houston, TX</a></li>
+                        <li role="listitem"><a href="#">Phoenix, AZ</a></li>
+                        <li role="listitem"><a href="#">Philadelphia, PA</a></li>
+                        <li role="listitem"><a href="#">San Antonio, TX</a></li>
+                        <li role="listitem"><a href="#">San Diego, CA</a></li>
+                        <li role="listitem"><a href="#">Dallas, TX</a></li>
+                        <li role="listitem"><a href="#">San Jose, CA</a></li>
+                    </ul>
+                </div>
+                <div class="currentday-container">
+                    
+                </div>
+                <div class="fiveday-container">
+                    <div class="forecast-grid" role="list" >
+                        <div class="day-item" id="day1" role="listitem"></div>
+                        <div class="day-item" id="day2" role="listitem"></div>
+                        <div class="day-item" id="day3" role="listitem"></div>
+                        <div class="day-item" id="day4" role="listitem"></div>
+                        <div class="day-item" id="day5" role="listitem"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
+    integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U=" crossorigin="anonymous">
+    </script>
+    <script src="./Assets/js/script.js"></script>
+</body>
+</html>
