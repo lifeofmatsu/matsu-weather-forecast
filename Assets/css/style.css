@@ -1,3 +1,168 @@
+:root {
+    /* Tokyo Night Light/Storm color palettes by enkia (https://github.com/enkia/tokyo-night-vscode-theme) */
+    --light-base: #d5d6db;
+    --light-text: #343b58;
+    --light-colbgd: #cfc9c2;
+    --light-colfgd: #5a4a78;
+    --light-border: #9699a3;
+
+    --storm-base: #24283b;
+    --storm-text: #a9b1d6;
+    --storm-colbgd: #414868; 
+    --storm-colfgd: #7aa2f7;
+    --storm-border: #565f89;
+
+    --tokyo-toggle: #0f4b6e;
+    --light-toggle: #cfc9c2; 
+    --storm-toggle: #565a6e;
+
+    /* future and present themes sourced from Microsoft Excel cell styles*/
+    /* faded grey them for past obtained myself */
+    --future-green: #006100;
+    --future-green-bgd: #c6efce;
+    --present-red: #9c0006;
+    --present-red-bgd: #ffc7ce;
+    --past-faded: #73747a;
+    --past-faded-bgd: #aaacaf;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    font-size: 2.0rem;
+}
+
+div {
+    font-size: 1.5rem;
+}
+
+h1, h2, h3, h4, p {
+    line-height: 1.0; 
+    margin-top: 0.25rem;
+    margin-bottom: 1rem;
+}
+
+h1 {
+    font-size: 4rem;
+    font-weight: 500;
+    color: #ffffff;
+}
+
+h2 {
+    font-size: 3.5rem;
+    color: #4caf50;
+}
+
+h3 {
+    font-size: 3rem;
+}
+
+p {
+    font-size: 2rem;
+    font-weight: 300;
+    line-height: 1.5;
+    margin-bottom: 2rem;
+    color: #dddddd; /* Lighter text color */
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1a1a1a;
+    color: #ffffff;
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#weather-container {
+    width: 100%;
+}
+
+#grid-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    column-gap: 20px;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+#left-panel {
+    display: grid;
+    grid-template-rows: auto auto;
+    row-gap: 10px;
+    padding-left: 10px;
+    padding-right: 20px;
+}
+
+.search-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #3a3a3a;
+    border-radius: 5px;
+    background-color: #2d2d2d;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+#search-button {
+    width: 100%;
+    padding: 10px;
+    cursor: pointer;
+    background-color: #4caf50;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+}
+
+.search-history {
+    display: none;
+    border: 1px solid #3a3a3a;
+    border-radius: 0;
+    background-color: #2d2d2d;
+    max-height: 150px;
+    overflow-y: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#right-panel {
+    display: grid;
+    grid-template-rows: auto auto;
+    gap: 20px;
+    padding-left: 10px;
+    padding-right: 20px;
+}
+
+#current-weather,
+#forecast {
+    background-color: #2d2d2d;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+#forecast div {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    padding: 15px;
+    margin-bottom: 10px;
+    background-color: #2d2d2d;
+    border-radius: 5px;
+}
+
+.temperature, .wind-speed {
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.title-frame {
+    padding: 20px;
+}
 
 /* 
 =============
@@ -78,3 +243,35 @@ input:checked + .toggle:before {
 GRID & GRID ITEMS
 =================
 */
+
+.title-grid {
+    display: grid;
+    column-gap: 20px;
+    grid-template-columns: 1fr 120px 60px;
+    grid-template-rows: 1fr 1fr;
+}
+
+.title-item1 {
+
+}
+
+.title-item2 {
+     grid-column: 2 / span 2;
+     place-self: center end;
+}
+
+.title-item3 {
+    font-family: 'Raleway Semibold', sans-serif;
+    font-size: 1.75rem;
+    font-weight: 400;
+    grid-column: 2 / span 1;
+    grid-row: 2 / span 1;
+    place-self: center end;
+}
+
+.title-item4 {
+    place-self: center end;
+    grid-column: 3 / span 1;
+    grid-row: 2 / span 1;
+}
+
